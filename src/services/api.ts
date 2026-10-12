@@ -1,0 +1,3 @@
+// Replace with authenticated fetch/axios calls when a backend is available.
+export async function readList<T>(key:string,fallback:T):Promise<T>{await new Promise(r=>setTimeout(r,150));try{const s=localStorage.getItem('routepilot:'+key);return s?JSON.parse(s) as T:fallback}catch{return fallback}}
+export async function saveList<T>(key:string,value:T):Promise<T>{localStorage.setItem('routepilot:'+key,JSON.stringify(value));return value}

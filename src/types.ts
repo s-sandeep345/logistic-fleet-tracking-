@@ -1,0 +1,4 @@
+export type Status='Active'|'In transit'|'Delivered'|'Delayed'|'Available'|'On duty'|'Maintenance'|'Offline'|'Pending';
+export type Vehicle={id:string;name:string;plate:string;type:string;status:Status;driver:string;location:string;fuel:number;odometer:number;maintenance:string};
+export type Driver={id:string;name:string;initials:string;phone:string;license:string;status:Status;vehicle:string;deliveries:number;rating:number;location:string};
+export type Shipment={id:string;customer:string;origin:string;destination:string;driver:string;vehicle:string;status:Status;date:string;eta:string;priority:'Standard'|'Express'|'Critical';progress:number};
