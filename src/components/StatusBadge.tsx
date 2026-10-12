@@ -4,6 +4,6 @@ type StatusBadgeProps = { status: string; children?: ReactNode };
 
 /** Consistent status indicator shared by tables and tracking cards. */
 export default function StatusBadge({ status, children }: StatusBadgeProps) {
-  const className = status.toLowerCase().replaceAll(' ', '-');
+  const className = status.toLowerCase().replace(/ /g, '-');
   return <span className={'status-badge ' + className}><i aria-hidden="true" />{children ?? status}</span>;
 }
